@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+<nav class="nav-panel">
+    <div class='nav_panel_content'>
+        <h1> Home Page</h1>
+<a href="{{url_for('user_list')}}">See User List</a>
+<a href="{{url_for('create_user')}}">Create User</a>
+    </div>
+</nav>
+
+<div>
+    Things are meant to be here
+</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+
+{% block content%}
+<nav class="nav-panel">
+    <div class='nav_panel_content'>
+        <h1>Create User</h1>
+        <a href="{{url_for('user_list')}}">Back To List</a>
+    </div>
+</nav>
+
+    
+    <div class="form-content">
+        <h2> User Details Form</h2>
+        <form action="" method="POST">
+            {{ form.hidden_tag() }}
+            <div>
+                <fieldset>
+                    <div>
+                        {{form.username.label}}
+                        {{form.username}}
+                    </div>
+            
+                    <div>
+                        {{form.email.label}}
+                        {{form.email}}
+                    </div>
+                        <div id="user.id" class="save-button">
+                            {{ form.submit}}
+                        </div>
+                        
+
+                </fieldset>
+            </div>
+           
+            
+        
+
+        </form>
+    
+   
+{% endblock %}

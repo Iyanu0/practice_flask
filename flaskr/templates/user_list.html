@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<nav class="nav-panel"></nav>
+    <div class='nav_panel_content'>
+        <h1> User List Page</h1>
+        <a href="{{url_for('create_user')}}" class="user_create">Create Another User</a>
+    <a href="{{url_for('home')}}" class="home_page"> Home</a>
+    </div>
+</nav>
+<div class="user_content">
+    {% for user in users %}
+    {% if user %}
+        
+        <p>Username: {{ user.username }} </p>
+        <p>Email: {{user.email }}</p>
+       
+        <form action="{{ url_for('delete',id=user.id) }}" method="POST">
+            <input type="submit" value="Delete">
+        </form>
+         <hr>
+    {% else %}
+    <h1>The User List will be up soon!</h1>
+        <p>No user Found</p>
+    {% endif %}
+    {% endfor %}
+
+    
+</div>
+
+
+{% endblock %}
