@@ -50,7 +50,8 @@ input{
 }
 
 .alert-warning{
-    background-color:lightgoldenrodyellow;
+    background-color:rgb(228, 94, 33);
+    display: inline;
 }
 
 .form-content{
@@ -102,4 +103,7 @@ img{
     position: relative;
     height: 300px;
     width: 300px;
+}
+.form-input{
+    border:none
 }

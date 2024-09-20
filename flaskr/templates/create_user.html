@@ -8,29 +8,25 @@
         <a href="{{url_for('user_list')}}">Back To List</a>
     </div>
 </nav>
-
-    
     <div class="form-content">
         <h2> User Details Form</h2>
         <form action="" method="POST">
             {{ form.hidden_tag() }}
             <div>
-                <fieldset>
-                    <div>
+                <fieldset class="form-input">
+                    <div class="form-input username">
                         {{form.username.label}}
                         {{form.username}}
                     </div>
             
-                    <div>
+                    <div class="form-input email">
                         {{form.email.label}}
                         {{form.email}}
                     </div>
-                        <div id="user.id" class="save-button">
-                            {{ form.submit}}
-                        </div>
-                        
-
                 </fieldset>
+                <div id="user.id" class="save-button">
+                    {{ form.submit}}
+                </div>
             </div>
            
             
